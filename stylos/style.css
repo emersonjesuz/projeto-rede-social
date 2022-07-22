@@ -1,0 +1,78 @@
+@charset "UTF8";
+
+*{
+    margin:  0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+body{
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-attachment: fixed;
+    background-size: cover;
+    /*
+    aqui é a configuração da imagens maderada do fundo..
+
+    no-repeat : nao deixa a imagem do background repetir
+
+    top, center: vai deixar a posição dela a pra cima no centro
+    
+    attachment fixed: vai deixa ela sem a barra de rolagem 
+    
+    size cover : vai deixa a imagem no tamanho inteiro da tela
+    */
+    
+}
+main{
+    position: relative;
+    height: 100vh;
+    
+}
+
+section#telefone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*
+    usando a posição absolute; vai deixar usar ...
+    top; left; para movimentar a imagem
+    tranform translate; vai fazer o movimento da imagem 
+    */
+    height: 627px;
+    width: 311px;
+    background: url('../imagens/frame-iphone.png') no-repeat;
+}
+
+iframe#tela{
+    position: relative;
+    top: 80px;
+    left: 23px;
+
+    width: 264px;
+    height: 469px;
+}
+section#redes-sociais{
+    text-align:  right;
+    
+}
+section#redes-sociais img{
+    width: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.486);
+    box-sizing: border-box;/*box  sizing pode tira aquele movimento da imagem que fica quando usamos o hover-- ele faz ficar uma borda msm que seja invisivel */
+}
+section#redes-sociais img:hover{
+    /*tem como colocar o transition direto na tag da css exp:transform, border... qualquer coisa que apareça*/
+    border:3px solid rgba(255, 255, 255, 0.485);
+    transform: translate(-16px,-2px);
+    box-shadow: 5px 5px 10px black;
+    transition: transform .6s,border 1s;
+
+}
+/*::-webkit-scrollbar=== ele tira as barras de rolagem podendo deixa ate invisivel*/
